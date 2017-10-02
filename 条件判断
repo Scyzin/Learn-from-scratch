@@ -1,0 +1,36 @@
+#条件判断
+age=int(input('please enter your age:'))
+#input返回的数据类型的是字符串，得定义为数字
+if age >= 18:# ：不能少
+    print('your age is ',age)
+    print('adult')
+elif age>=6:#else if
+    print('your age is ',age)
+    print('teenager')
+elif age>=3:
+     print('your age is ',age)
+age = 20
+if age >= 6:
+    print('teenager')#某个判断为True，就忽略剩下的else
+elif age >= 18:
+    print('adult')
+else:
+    print('kid')
+if []:
+    print('True')#非零数值、非空字符串、非空list，就判断为True
+# _*_ coding: utf-8 _*_
+
+a=float(input('小明身高：'))
+b=float(input('小明体重：'))
+c=b/(a*a)
+if c<=18:
+    print('过轻')
+elif 18<c and c<25:
+    print('正常')
+elif 25<c and c<28:
+    print('过重')
+elif 28<c and c<32:
+    print('肥胖')
+elif c>32:
+    print('严重肥胖')
+
