@@ -1,0 +1,33 @@
+#list和tuple
+classmates=['as']   #列表
+#可以通过索引引出，第一个是classmates[0]     不可以超出元素索引界限
+    #  -1是最后一个，同理可以得
+classmates. append('Adam')#在list中添加元素到末尾
+classmates.insert(1,'Jack')#在list中插入元素
+classmates.pop()#删除list末尾的元素
+classmates.pop(1)#删除指定位置的元素
+classmates[0]='Sarah'#把某个元素替换成别的元素，可以直接赋值给相应的索引位置
+L=[]#list中一个元素都没
+#len(L)=0
+
+tuple#元组，即初始化话就不能修改的list
+t=(1,)#这是定义只有一个元素的tuple，中间必须加一个逗号，来消除歧义
+t = ('a', 'b', ['A', 'B'])
+t[2][0] = 'X'
+t[2][1] = 'Y'#tuple一开始指向的list，并没有改变tuple中的元素，但指向的list本身是可变的。
+t
+('a', 'b', ['X', 'Y'])
+# -*- coding: utf-8 -*-
+
+L = [
+    ['Apple', 'Google', 'Microsoft'],
+    ['Java', 'Python', 'Ruby', 'PHP'],
+    ['Adam', 'Bart', 'Lisa']
+]
+# 打印Apple:
+print(L[0][0])
+# 打印Python:
+print(L[1][0])
+# 打印Lisa:
+print(L[2][1])
+
