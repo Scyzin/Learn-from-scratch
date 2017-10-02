@@ -1,0 +1,41 @@
+#学习类型和变量
+print('I\'m \"ok".')#\代表转义字符，当一个字符串有'和”同时出现时的
+print('I\'m learning\nPython')
+#“”本身只是一种表达方式，如果''也是一种字符  就可以用“”括起来。
+print('\\\n\\n')#\n表示换行   \t表示制符
+print('\\\t\\')
+print(r'\\\t\\')#r""代表默认不转义
+print('''line1
+line2
+line3''')
+print(r'''line1
+line2
+line3''')
+
+True and False    # true  两者全为真，结果才是true   and与运算
+True or False   # 一个为真，则or运算结果为真
+not 1>2      #把true 变成False，把False变成true
+5>3 and 3>5
+5>3 or 3>5
+x=2
+x=x+2  #重新赋值  动态语言的好处
+print(x)
+a='ABC'
+b=a
+a='xyz'
+print(a,b)
+PI=3.14159265359#常用大写变量名表示常量只是一个习惯上的用法。
+# /表示出发，永远是浮点数表达。 //表示整数除法，两个整数的除法仍然是整数。
+#none是空值，0是有意义的。
+#   =是赋值语句。
+t_007='T007'
+a=123#动态语言
+#  1.0e-9带表0.00000001   1.0e9=100000000
+
+age=int(input("请输入年龄"))
+if age>=18:
+    print('adult')
+else:
+    print('teenager')
+
+
