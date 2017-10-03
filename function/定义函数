@@ -1,0 +1,38 @@
+#定义函数, 函数返回值用return 语句返回
+def my_abs(x):
+    if x >= 0:
+        return x
+    else:
+        return -x
+
+#空函数
+def nop():
+    pass    #pass就是一个占位符，让代码能运行起来。缺少就会有语法错误
+#游戏中经常需要从一个点移动到另一个点，给出坐标、位移和角度，就可以计算出新的新的坐标
+#函数返回的是单一值，多个值就是一个tuple。
+
+import math     #打入math包
+def move(x,y,step,angle=()):
+    nx = x + step * math.cos(angle)
+    ny = y - step * math.sin(angle)
+    return nx,ny
+print( move(100, 100, 60, math.pi / 6))
+#>>> x, y = move(100, 100, 60, math.pi / 6)
+#>>> print(x, y)
+#151.96152422706632 70.0
+
+#定义一个函数quadratic(a, b, c)，接收3个参数，返回一元二次方程：
+#ax2 + bx + c = 0的两个解。
+
+# -*- coding: utf-8 -*-
+
+import math
+def quadratic(a, b, c):
+    for i in (a, b, c):
+        if not isinstance(i, (int,float)):
+            raise TypeError('参数错误！')
+    if b * b < 4 * a * c or a == 0:
+        return '此题无解！'
+    else:
+        return {(-b + math.sqrt(b*b - 4 * a * c)) / (2 * a), (-b - math.sqrt(b*b - 4 * a * c)) / (2 * a)}
+print(quadratic(2, 3, 1))
