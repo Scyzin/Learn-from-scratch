@@ -1,0 +1,42 @@
+#函数的参数
+#   x的二次方
+def power(x):
+    return x * x
+print(power(5))
+#   x的n次方
+def power(x,n):
+    s=1
+    while n >0 :
+        n = n - 1
+        s = s * x
+    return s
+print(power(5,5))   #   x,n为位置参数
+# 默认n=2； 必选参数在前，默认参数灾后
+def power(x, n=2):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
+#定义一年级小学生注册的函数；年龄和城市设置为默认参数
+def enroll(name,gender,age=6,city='Beijing'):
+    print('name',name)
+    print('gender',gender)
+    print('age',age)
+    print('city',city)
+
+#默认参数的大坑
+def add_end(L=[]):
+    L.append('END')
+    return L
+#函数在定义时，默认参数的值倍计算了出来，即【】，默认参数必须指向不变对象
+#add_end([1,2,3])
+#[1, 2, 3, 'END']
+#add_end([])
+#['END']
+#正确；设置NONE这个不变对象
+def add_end(L=None):
+    if L is None:
+        L = []
+    L.append('END')
+    return L
