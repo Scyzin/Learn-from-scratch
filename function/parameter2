@@ -1,0 +1,43 @@
+#可变参数，a,b,c的2次方的和
+def cale(*numbers):     #定义一个可变函数
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+print(cale(1,2,3))
+
+#从已有的list或者tuple中调用可变参数
+nums=[1,2,3]
+print(cale(*nums))      # *nums表示把nums这个list的所有元素作为可变参数传进去
+
+#关键字参数:扩展函数的功能。
+def person(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+extra = {'city': 'Beijing', 'job': 'Engineer'}
+print(person('Jack', 24, **extra))
+
+#命名关键字参数,命名关键字参数需要一个特殊分隔符*，
+# *后面的参数被视为命名关键字参数
+def person (name,age,*,city,job):
+    print(name,age,city,job)
+#def person(name, age, city, job):
+    # 缺少 *，city和job被视为位置参数
+#   pass
+
+#参数定义的顺序：
+# 必选参数、默认参数、可变参数、命名关键字参数和关键字参数。
+def f1(a, b, c=0, *args, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'args =', args, 'kw =', kw)
+
+def f2(a, b, c=0, *, d, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'd =', d, 'kw =', kw)
+#通过类似func(*args, **kw)的形式调用它
+#Python的函数具有非常灵活的参数形态，既可以实现简单的调用，又可以传入非常复杂的参数。
+
+#默认参数一定要用不可变对象，如果是可变对象，程序运行时会有逻辑错误！
+
+#要注意定义可变参数和关键字参数的语法：
+
+#*args是可变参数，args接收的是一个tuple；
+
+#**kw是关键字参数，kw接收的是一个dict。
